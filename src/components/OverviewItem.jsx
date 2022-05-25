@@ -40,9 +40,6 @@ const ImageContainer = styled.section`
 `;
 
 const ItemContent = styled.section`
-  /* display: flex;
-  flex-direction: column;
-  align-items: ; */
   text-align: left;
 
   p {
