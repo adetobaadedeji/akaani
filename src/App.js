@@ -1,6 +1,7 @@
 import { LeftBar, MainPage, RightBar } from './containers';
 import { GlobalStyles } from './globalStyles'
 import styled from 'styled-components';
+import Slideover from './containers/slideover/Slideover';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <LeftBar />
       <MainPage />
       <RightBar />
+      <Slideover />
     </Main>
   </>
     

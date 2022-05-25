@@ -17,8 +17,16 @@ import {
 } from './MainPage.styles';
 import OverviewItem from '../../components/OverviewItem';
 import Tabs from '../../components/Tabs';
+import { useDispatch } from 'react-redux';
+import { toggleSlideover } from '../../redux/slices/slideoverSlice';
 
 const MainPage = () => {
+  const dispatch = useDispatch();
+
+  const handleToggle = () => {
+    dispatch(toggleSlideover());
+  };
+
   const items = [
     {
       link: TruckIcon,
@@ -73,13 +81,13 @@ const MainPage = () => {
       <Tabs>
         <PaidTab label="Paid">
           <PaidContent>
-            <div className="icon-background">
+            <section className="icon-background">
               <ShopIcon />
-            </div>
+            </section>
             <p className="para">No Paid Baskets, yet!</p>
-            <div className="toggle">
+            <section className="toggle" onClick={handleToggle}>
               <ToggleIcon />
-            </div>
+            </section>
           </PaidContent>
         </PaidTab>
         <PendingTab label="Pending">Pending</PendingTab>
